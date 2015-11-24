@@ -21,7 +21,12 @@
   {{else}}
   {{#if this.useSemantic}}
   <div {{this.atts}}>
-    <div class="bar" style="width: {{this.progress}}%"></div>
+      <div class="ui active progress">
+          <div class="bar" style="width: {{this.progress}}%">
+              <div class="progress"></div>
+          </div>
+          <div class="label">{{this.label}}</div>
+      </div>
   </div>
   {{else}}
   <progress value="{{this.progress}}" max="100" {{this.atts}}>{{this.progress}}%</progress>
